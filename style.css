@@ -1,0 +1,208 @@
+.expand-slider .container {
+	 width: 100%;
+	 /* height: 500px; */
+	 /* overflow: hidden; */
+}
+ .expand-slider .flex-container {
+	 display: flex;
+	 width: 100%;
+	 height: 470px;
+	 gap: 10px;
+	 margin-top: 50px;
+}
+ .expand-slider .flex-slide {
+	 background-size: cover;
+	 background-position: center;
+	 flex: 1;
+	 position: relative;
+	 transition: all 0.5s ease-in-out;
+	 overflow: hidden;
+	 cursor: pointer;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 background-position: top;
+	 border-radius: 10px;
+}
+ .expand-slider .flex-title {
+	 color: white;
+	 font-size: 25px;
+	 font-weight: bold;
+	 position: absolute;
+	 /* top: 15%; */
+	 left: 3%;
+	 transition: all 0.4s ease;
+	 text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+	 display:flex;
+	 justify-content:space-between;
+	 bottom: 52px;
+	 width: 235px;
+}
+.expand-slider .flex-title .ratting h5 {
+	font-size:16px;
+}
+.expand-slider .flex-title .ratting h5 i {
+	color: #ff8906;
+}
+.expand-slider .flex-title .ratting p{
+	font-size:14px;
+	font-weight:normal;
+}
+.expand-slider .flex-title  .writer-title{
+	transform: rotate(90deg);
+	font-size: 23px;
+}
+ .expand-slider .flex-about {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.6s ease-in-out;
+	color: white;
+	text-align: center;
+	width: 100%;
+	padding: 0 39px; /* keep horizontal padding only */
+}
+ .expand-slider .flex-slide:hover {
+	 flex: 3;
+	 background-color:#000E87 ;
+	 background-image: none !important;
+}
+ .expand-slider .flex-slide:hover .flex-title {
+	 transform: rotate(0deg);
+	 top: 10%;
+	 opacity: 0;
+	 /* display: flex; */
+}
+ .expand-slider .flex-slide:hover .flex-about {
+	opacity: 1;
+	max-height: 100%;
+	padding: 20px 30px;
+}
+ @media (max-width: 768px) {
+	 .expand-slider .flex-title {
+		 font-size: 1.2rem;
+		 top: 10%;
+		 left: 5%;
+	}
+	 .expand-slider .flex-about {
+		 font-size: 0.9rem;
+	}
+}
+ .show-writer-full-details .profile-header {
+	 display: flex;
+	 justify-content: space-between;
+	 /* align-items: center; */
+	 flex-wrap: wrap;
+}
+ .show-writer-full-details .profile-header h2 {
+	 font-size: 24px;
+	 font-weight: bold;
+	 display: flex;
+	 align-items: center;
+	 line-height: normal;
+}
+ .show-writer-full-details .verified-badge {
+	 color: #00e676;
+	 margin-left: 8px;
+	 font-size: 20px;
+}
+ .show-writer-full-details .rating {
+	 text-align: right;
+	 font-size: 14px;
+}
+ .show-writer-full-details .rating span {
+	 color: #fff;
+	 font-size: 18px;
+	 font-weight: 600;
+}
+ .show-writer-full-details .rating span i{
+	 color:#FFD117;
+}
+ .show-writer-full-details .degree {
+	 margin-top: 0px;
+	 font-size: 16px;
+	 color: #ccc;
+	 text-align: start;
+}
+ .show-writer-full-details .tags {
+	 margin: 20px 0;
+	 display: flex;
+	 gap: 10px;
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+}
+ .show-writer-full-details .tag {
+	 border-radius: 6px;
+	 padding: 6px 12px;
+	 font-size: 14px;
+	 flex: 1;
+	 background: #29359A;
+}
+ .show-writer-full-details .stats {
+	 display: flex;
+	 justify-content: space-between;
+	 text-align: center;
+	 margin: 20px 0;
+	 flex-wrap: wrap;
+	 gap: 10px;
+}
+ .show-writer-full-details .stat {
+	 flex: 1;
+	 min-width: 100px;
+	 text-align: start;
+}
+ .show-writer-full-details .stat strong {
+	 font-size: 20px;
+	 display: block;
+}
+ .show-writer-full-details .loves-to-write {
+	 margin-top: 20px;
+	 font-size: 16px;
+	 color: #fff;
+	 text-align: start;
+}
+ .show-writer-full-details .topics {
+	 font-weight: 500;
+	 font-size: 15px;
+	 color: #fff;
+	 text-align: start;
+}
+ .show-writer-full-details .buttons {
+	 display: flex;
+	 justify-content: space-between;
+	 margin-top: 40px;
+	 gap: 10px;
+	 flex-wrap: wrap;
+}
+ .show-writer-full-details .buttons a {
+	 flex: 1;
+	 min-width: 140px;
+	 padding: 12px;
+	 border-radius: 30px;
+	 font-weight: bold;
+	 font-size: 14px;
+	 border: none;
+	 cursor: pointer;
+}
+ .show-writer-full-details .hire-btn {
+	 background-color: #ff9800;
+	 color: #fff;
+}
+ .show-writer-full-details .about-btn {
+	 background-color: transparent;
+	 border: 2px solid #fff !important;
+	 color: #fff;
+}
+ @media (max-width: 480px) {
+	 .show-writer-full-details .profile-header {
+		 flex-direction: column;
+		 align-items: flex-start;
+	}
+	 .show-writer-full-details .buttons {
+		 flex-direction: column;
+	}
+}
+ .flex-container.hoverd .flex-title{
+	width: 164px;
+	justify-content: start;
+	}
